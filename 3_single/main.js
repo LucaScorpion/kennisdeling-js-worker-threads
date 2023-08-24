@@ -1,7 +1,7 @@
 const {Worker, isMainThread, workerData, parentPort} = require('worker_threads');
 
 if (isMainThread) {
-  const worker = new Worker(__filename, {workerData: {value: 42}});
+  const worker = new Worker(__filename, {workerData: {value: 77}});
   worker.on('message', printResult);
 } else {
   const {value} = workerData;
